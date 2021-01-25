@@ -10,8 +10,6 @@ WORKDIR /usr/src/app
 COPY . .
 RUN npm install
 RUN npm run build
-RUN cp -rf ./public/reportDesign ./build/
-RUN cp -rf ./public/stimulsoft ./build/
 RUN cp ./nginx-cf/nginx.conf /etc/nginx/
 CMD ["nginx", "-g", "daemon off;"]
 
